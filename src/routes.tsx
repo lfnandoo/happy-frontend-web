@@ -2,13 +2,15 @@ import React from "react";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import LadingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
+import OrphanagesMap from "./pages/OrphanagesMap";
 
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={LadingPage} />
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/app" exact component={OrphanagesMap} />
       </Switch>
     </BrowserRouter>
   );
