@@ -6,6 +6,10 @@ export const Container = styled.div`
 
   position: relative;
   display: flex;
+
+  .leaflet-container {
+    z-index: 5;
+  }
   
   > aside {
     width: 440px;
@@ -21,6 +25,8 @@ export const Container = styled.div`
     position: absolute;
     right: 40px;
     bottom: 40px;
+
+    z-index: 10;
 
     width: 64px;
     height: 64px;
