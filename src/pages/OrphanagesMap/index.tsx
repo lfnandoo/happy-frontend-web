@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Header, Footer } from "./styles";
+import * as Style from "./styles";
 import "leaflet/dist/leaflet.css";
 
 import mapMarkerImg from "../../images/map-marker.svg";
@@ -10,19 +10,19 @@ import { Map, TileLayer } from "react-leaflet";
 
 const OrphanagesMap: React.FC = () => {
   return (
-    <Container>
+    <Style.Container>
       <aside>
-        <Header>
+        <Style.Header>
           <img src={mapMarkerImg} alt="" />
 
           <h2>Escolha um orfanato no mapa</h2>
           <p>Muitas crianças estão esperando a sua visita :)</p>
-        </Header>
+        </Style.Header>
 
-        <Footer>
+        <Style.Footer>
           <strong>Belford Roxo</strong>
           <span>Rio de Janeiro</span>
-        </Footer>
+        </Style.Footer>
       </aside>
 
       <Map
@@ -39,7 +39,7 @@ const OrphanagesMap: React.FC = () => {
       <Link to="">
         <FiPlus size={32} color="#FFF" />
       </Link>
-    </Container>
+    </Style.Container>
   );
 };
 
