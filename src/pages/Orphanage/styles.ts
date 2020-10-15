@@ -178,9 +178,9 @@ export const Hour = styled.div`
 `;
 
 export const OpenOnWeekends = styled.div`
-  background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
-  border: 1px solid #A1E9C5;
-  color: #37C77F;
+  background: ${({ dontOpen}: { dontOpen?: boolean }) => dontOpen ? "linear-gradient(154.16deg, #FDF0F5 7.85%, #FFFFFF 91.03%)" : "linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%)"} linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
+  border: ${({ dontOpen }: { dontOpen?: boolean }) => dontOpen ? "1px solid #FFBCD4" : "1px solid #A1E9C5"};
+  color: ${({ dontOpen }: { dontOpen?: boolean }) => dontOpen ? "#FF669D" : "#37C77F"};
 `;
 
 export const ContactButton = styled.button`
