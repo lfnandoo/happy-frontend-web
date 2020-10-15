@@ -1,7 +1,6 @@
 import React from "react";
 import * as Style from "./styles";
 
-import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo, FiArrowLeft } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { useHistory } from "react-router-dom";
@@ -130,11 +129,6 @@ const Orphanage: React.FC = () => {
                 fim de semana
               </Style.OpenOnWeekends>
             </Style.OpenDetails>
-
-            <Style.ContactButton type="button">
-              <FaWhatsapp size={20} color="#FFF" />
-              Entrar em contato
-            </Style.ContactButton>
           </Style.OrphanageContentDetails>
         </Style.OrphanageDetails>
       </Style.MainContent>
