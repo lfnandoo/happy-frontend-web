@@ -90,7 +90,17 @@ export const InputLabel = styled.label`
   }
 `;
 
-export const UploadedImage = styled.div``;
+export const ImagesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+
+  img {
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+  }
+`;
 
 export const NewImage = styled.label`
   height: 96px;
@@ -105,21 +115,13 @@ export const NewImage = styled.label`
   align-items: center;
 `;
 
+export const FileInput = styled.input`
+  visibility: hidden;
+`;
+
 export const ButtonSelect = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  > button {
-    height: 64px;
-
-    background: #F5F8FA;
-    border: 1px solid #D3E2E5;
-    color: #5C8599;
-    cursor: pointer;
-    background: ${({ isActive }: { isActive: boolean }) =>  isActive ? "#EDFFF6" : ""};
-    border: ${({ isActive }: { isActive: boolean }) =>  isActive ? "1px solid #A1E9C5" : ""};
-    color: ${({ isActive }: { isActive: boolean }) =>  isActive ? "#37C77F" : ""};
-  }
 
   > button:first-child {
     border-radius: 20px 0px 0px 20px;
@@ -129,6 +131,19 @@ export const ButtonSelect = styled.div`
     border-radius: 0 20px 20px 0;
     border-left: 0;
   }
+`;
+
+export const ButtonForSelect = styled.button`
+  height: 64px;
+
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  color: #5C8599;
+  cursor: pointer;
+
+  background: ${({ isActive }: { isActive: boolean }) =>  isActive ? "#EDFFF6" : ""};
+  border: ${({ isActive }: { isActive: boolean }) =>  isActive ? "1px solid #A1E9C5" : ""};
+  color: ${({ isActive }: { isActive: boolean }) =>  isActive ? "#37C77F" : ""};
 `;
 
 export const ButtonConfirm = styled.button`
