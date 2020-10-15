@@ -107,7 +107,7 @@ const Orphanage: React.FC = () => {
               </Map>
 
               <footer>
-                <a href="">Ver rotas no Google Maps</a>
+                <a href="/">Ver rotas no Google Maps</a>
               </footer>
             </Style.MapContainer>
 
